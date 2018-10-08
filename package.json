@@ -1,0 +1,35 @@
+{
+    "name": "vscode-deltaforth",
+    "displayName": "DeltaForth",
+    "description": "DeltaForth extension for VS Code",
+    "version": "1.4.1",
+    "publisher": "mcneight",
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "deltaforth",
+                "aliases": [
+                    "DeltaForth",
+                    "deltaforth"
+                ],
+                "extensions": [
+                    ".4th"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "deltaforth",
+                "scopeName": "source.deltaforth",
+                "path": "./syntaxes/deltaforth.tmLanguage.json"
+            }
+        ]
+    }
+}

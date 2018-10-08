@@ -1,0 +1,84 @@
+{
+    "fileTypes": [
+        "4th"
+    ],
+    "keyEquivalent": "^~F",
+    "name": "DeltaForth",
+    "patterns": [
+        {
+            "match": "(?i:(?<=^|\\s)(TRUE|FALSE|BL|PI|CELL|C\/L|R\/O|W\/O|R\/W)(?=\\s))",
+            "name": "constant.language.deltaforth"
+        },
+        {
+            "match": "(?<=^|\\s)([$#%]?[-+]?[0-9]+(\\.[0-9]*e(-?[0-9]+)|\\.?[0-9a-fA-F]*))(?=\\s)",
+            "name": "constant.numeric.deltaforth"
+        },
+        {
+            "match": "(?<=^|\\s)(([&^]\\S)|((\"|')\\S(\"|')))(?=\\s)",
+            "name": "constant.character.deltaforth"
+        },
+        {
+            "comment": "ANSI line comment",
+            "match": "(?<=^|\\s)(\\\\ .*$)",
+            "name": "comment.line.backslash.deltaforth"
+        },
+        {
+            "comment": "ANSI block comment (one line)",
+            "match": "(\\(.*\\))",
+            "name": "comment.block.oneline.deltaforth"
+        },
+        {
+            "comment": "ANSI block comment (multi line)",
+            "begin": "(?<=^|\\s)(\\()(?=\\s)",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.comment.begin.deltaforth"
+                }
+            },
+            "end": "(?<=^|\\s)(\\)$)",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.comment.end.deltaforth"
+                }
+            },
+            "name": "comment.block.multiline.deltaforth"
+        },
+        {
+            "comment": "",
+            "match": "(?i:((?<=ABORT\" )|(?<=BREAK\" )|(?<=\\.\" )|(C\" )|(S\\\\?\" )))[^\"]+\"",
+            "name": "string.quoted.double.deltaforth"
+        },
+        {
+            "comment": "",
+            "match": "(?i:((?<=INCLUDE)|(?<=NEEDS)|(?<=REQUIRE)|(?<=USE)))[ ]\\S+(?=\\s)",
+            "name": "string.unquoted.deltaforth"
+        },
+        {
+            "match": "(?<=^|\\s)\\[(?i:(\\?DO|\\+LOOP|AGAIN|BEGIN|DO|ELSE|ENDIF|IF|LOOP|REPEAT|THEN|UNTIL|WHILE))\\](?=\\s)",
+            "name": "keyword.control.immediate.deltaforth"
+        },
+        {
+            "match": "(?<=^|\\s)(?i:(-DO|\\-LOOP|\\?DO|\\?LEAVE|\\+DO|\\+LOOP|ABORT\\\"|AGAIN|BEGIN|CASE|DO|ELSE|ENDCASE|ENDIF|ENDOF|FOR|IF|LEAVE|LOOP|REPEAT|THEN|UNTIL|WHILE))(?=\\s)",
+            "name": "keyword.control.compile-only.deltaforth"
+        },
+        {
+            "match": "(?<=^|\\s)(?i:(\\?DUP-0=-IF|\\?DUP-IF|\\)|\\['\\]|\\[CHAR\\]|\\[COMPILE\\]|\\[IS\\]|\\[TO\\]|<COMPILATION|<INTERPRETATION|ASSERT\\(|ASSERT0\\(|ASSERT1\\(|ASSERT2\\(|ASSERT3\\(|COMPILATION>|DEFERS|DOES>|INTERPRETATION>|OF|POSTPONE))(?=\\s)",
+            "name": "keyword.other.compile-only.deltaforth"
+        },
+        {
+            "match": "(?<=^|\\s)(?i:('|LOAD))(?=\\s)",
+            "name": "keyword.other.non-immediate.deltaforth"
+        },
+        {
+            "match": "\\b(?i:I|J)\\b",
+            "name": "variable.language.deltaforth"
+        },
+        {
+            "comment": "",
+            "match": "(?<=^|\\s)(?i:(CONSTANT|VARIABLE))(?=\\s)",
+            "name": "storage.type.deltaforth"
+        }
+    ],
+    "scopeName": "source.deltaforth",
+    "uuid": "0AAA4CFD-D621-4B33-BB76-E5D9EDE64E84"
+}
