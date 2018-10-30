@@ -1,10 +1,15 @@
 {
     "fileTypes": [
+        "deltaforth",
         "4th"
     ],
     "keyEquivalent": "^~F",
     "name": "DeltaForth",
     "patterns": [
+        {
+            "match": "(:NONAME)|(^:|\\s:)(\\s)(\\S+)(?=\\s|$)",
+            "name": "entity.name.function.deltaforth"
+        },
         {
             "match": "(?i:(?<=^|\\s)(TRUE|FALSE|BL|PI|CELL|C\/L|R\/O|W\/O|R\/W)(?=\\s))",
             "name": "constant.language.deltaforth"
